@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.particle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-20px) scale(1.2);
+  }
+}
+
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes pulse-text {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+}
+
+.pulse-hover:hover {
+  animation: pulse-text 1.2s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 0px #ffffff;
+  }
+  50% {
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff;
+  }
+}
+
+@keyframes soft-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 1px rgba(255, 255, 255, 0.3),
+      0 0 2px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 2px rgba(255, 255, 255, 0.35),
+      0 0 4px rgba(255, 255, 255, 0.25);
+  }
+}
+
+.soft-glow {
+  animation: soft-glow 4s ease-in-out infinite;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: typewriter 3s steps(30, end) 1s 1 normal both,
+             blink-caret 0.75s step-end infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 1.5s ease-out both;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.5s;
+}
+
+.fade-in-delay-2 {
+  animation-delay: 1s;
+}
+
+.fade-in-delay-3 {
+  animation-delay: 1.5s;
+}
+
+/* Add this to bottom of index.css */
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.3s;
+}
+
+/* Glowing border for About section */
+.about-glow {
+  border: 2px solid rgba(59, 130, 246, 0.3); /* Tailwind blue-500 */
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4),
+              0 0 40px rgba(59, 130, 246, 0.2);
+  backdrop-filter: blur(4px);
+}
