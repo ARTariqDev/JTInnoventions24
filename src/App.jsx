@@ -51,7 +51,7 @@ function App() {
         <ParticleField />
       </div>
 
-      {/* Fixed Header */}
+
       <header className="fixed top-0 left-0 w-full z-[999] bg-black/90 backdrop-blur-md text-gray-100 shadow-md">
         <nav className="flex justify-center flex-wrap gap-4 sm:gap-6 px-4 py-4 text-sm sm:text-lg md:text-xl whitespace-nowrap">
           {['Home', 'About', 'Categories', 'Contact', 'Register'].map((text) =>
@@ -83,8 +83,8 @@ function App() {
 
       </header>
 
-      {/* Hero */}
-      <section className="z-10 relative pt-32 flex flex-col items-center text-center px-4">
+
+      <section id="Home" className="z-10 relative pt-32 flex flex-col items-center text-center px-4">
         <img
           src={Logo}
           alt="Logo"
